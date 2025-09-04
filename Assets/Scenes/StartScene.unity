@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5fcbe8c4c014c00bb66192c1919eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LandImage: {fileID: 988851152}
+  landImage: {fileID: 988851152}
   scrollSpeedX: 0.1
 --- !u!114 &988851152
 MonoBehaviour:
