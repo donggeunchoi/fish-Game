@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4703dc2c91ef4f79975833df754a2a3, type: 3}
   m_Name: RedFish
   m_EditorClassIdentifier: 
-  fishName: 
-  sprite: {fileID: 0}
-  moveSpeed: 0
+  fishName: "\uBE68\uAC04\uBB3C\uACE0\uAE30"
+  sprite: {fileID: 21300000, guid: 4be73ccaf4bbd4d27b05ba099c9922b3, type: 3}
+  moveSpeed: 4
   canSwimLeftRight: 0
