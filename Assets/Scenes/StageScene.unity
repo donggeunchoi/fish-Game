@@ -563,6 +563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53e6b74354af4c4fa226c92e33c2918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameSceneName: GameScene
+  stageSelectSceneName: StageScene
+  unlockedMask: 0
 --- !u!1 &1213763030
 GameObject:
   m_ObjectHideFlags: 0
