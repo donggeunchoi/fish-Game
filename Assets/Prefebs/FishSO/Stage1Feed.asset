@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4703dc2c91ef4f79975833df754a2a3, type: 3}
-  m_Name: BlueFish
+  m_Name: Stage1Feed
   m_EditorClassIdentifier: 
   fishName: "\uD30C\uB780\uBB3C\uACE0\uAE30"
   sprite: {fileID: 21300000, guid: c93cfe6cbaab648a7b92f96d64bce0da, type: 3}
