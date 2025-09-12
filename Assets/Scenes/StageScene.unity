@@ -932,6 +932,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1476079428}
     m_Modifications:
+    - target: {fileID: 1285128738310779541, guid: fba43b7d1960c48df83a64877a9bc940, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1142646016}
     - target: {fileID: 3972174007253133819, guid: fba43b7d1960c48df83a64877a9bc940, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1014,7 +1018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6403433452890146846, guid: fba43b7d1960c48df83a64877a9bc940, type: 3}
       propertyPath: m_Name
-      value: Stage4Button
+      value: Stage4Panel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1041,7 +1045,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 561525302678039752, guid: c23924e3ccac0478f9d06ea5ca997521, type: 3}
       propertyPath: m_Name
-      value: Stage5Button
+      value: Stage5Panel
       objectReference: {fileID: 0}
     - target: {fileID: 1932361830111526512, guid: c23924e3ccac0478f9d06ea5ca997521, type: 3}
       propertyPath: m_Pivot.x
@@ -1123,6 +1127,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8103740089204440413, guid: c23924e3ccac0478f9d06ea5ca997521, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1142646016}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1221,33 +1229,9 @@ PrefabInstance:
       value: Stage1Button
       objectReference: {fileID: 0}
     - target: {fileID: 5987646072832332026, guid: 2c27e062a424f44d1a77a80f4ea94525, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987646072832332026, guid: 2c27e062a424f44d1a77a80f4ea94525, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987646072832332026, guid: 2c27e062a424f44d1a77a80f4ea94525, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1142646016}
-    - target: {fileID: 5987646072832332026, guid: 2c27e062a424f44d1a77a80f4ea94525, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987646072832332026, guid: 2c27e062a424f44d1a77a80f4ea94525, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickInGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987646072832332026, guid: 2c27e062a424f44d1a77a80f4ea94525, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StageManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987646072832332026, guid: 2c27e062a424f44d1a77a80f4ea94525, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1263,7 +1247,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2198892297130102352, guid: 105536a77190e426ba0eeb71a54f08ee, type: 3}
       propertyPath: m_Name
-      value: Stage2Button
+      value: Stage2Panel
       objectReference: {fileID: 0}
     - target: {fileID: 2410376429993873088, guid: 105536a77190e426ba0eeb71a54f08ee, type: 3}
       propertyPath: m_Pivot.x
@@ -1345,6 +1329,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3251240602566213938, guid: 105536a77190e426ba0eeb71a54f08ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1142646016}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1370,7 +1358,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1829524268013923093, guid: 5328f917829c74ee1ba7d0fcde3ad22c, type: 3}
       propertyPath: m_Name
-      value: Stage3Button
+      value: Stage3Panel
       objectReference: {fileID: 0}
     - target: {fileID: 3218316775253265136, guid: 5328f917829c74ee1ba7d0fcde3ad22c, type: 3}
       propertyPath: m_Pivot.x
@@ -1452,6 +1440,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4995936689656344388, guid: 5328f917829c74ee1ba7d0fcde3ad22c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1142646016}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
