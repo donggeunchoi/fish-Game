@@ -53,57 +53,31 @@ public class GameManager : MonoBehaviour
             if (rule == null || rule.fish == null || rule.maxCount < 1) continue;
 
             int count = Random.Range(rule.minCount, rule.maxCount + 1);
-            // for (int i = 0; i < count; i++)
-            //     SpawnOne(rule.fish);
+            
         }
     }
 
-    // 물고기 1마리 생성
-    // void SpawnOne(FishMonster data)
-    // {
-    // if (data == null || data.prefab == null)
-    // {
-    //     Debug.LogWarning("[GameManager] FishMonster 데이터나 prefab이 비어있습니다.");
-    //     return;
-    // }
-    //
-    // Vector2 pos = RandomPointInArea();
-    // var go = Instantiate(data.prefab, pos, Quaternion.identity, container);
-    //
-    // 데이터 주입(네 FishController의 필드명이 다르면 여기를 맞춰줘)
-    // var ctrl = go.GetComponent<FishController>();
-    // if (ctrl != null)
-    // {
-    //     ctrl.fishData = data; // 예: public FishMonster fishData;
-    // }
-    // else
-    // {
-    //     // 스프라이트만 적용해두는 폴백
-    //     var sr = go.GetComponentInChildren<SpriteRenderer>();
-    //     if (sr && data.sprite) sr.sprite = data.sprite;
-    // }
 
-
-    // // 스폰 영역 안의 랜덤 좌표 반환
-    // Vector2 RandomPointInArea()
-    // {
-    //     if (spawnArea == null)
-    //     {
-    //         // 영역이 없으면 GameManager 주변 원형 범위로 폴백
-    //         return (Vector2)transform.position + Random.insideUnitCircle * 2f;
-    //     }
-    //
-    //     Bounds b = spawnArea.bounds;
-    //     float x = Random.Range(b.min.x, b.max.x);
-    //     float y = Random.Range(b.min.y, b.max.y);
-    //     return new Vector2(x, y);
-    // }
-    //
-    // // (디버그) 에디터에서 스폰 영역 보이기
-    // void OnDrawGizmosSelected()
-    // {
-    //     if (!spawnArea) return;
-    //     Gizmos.color = new Color(0f, 1f, 1f, 0.6f);
-    //     Gizmos.DrawWireCube(spawnArea.bounds.center, spawnArea.bounds.size);
-    // }
+    // 스폰 영역 안의 랜덤 좌표 반환
+    Vector2 RandomPointInArea()
+    {
+        if (spawnArea == null)
+        {
+            // 영역이 없으면 GameManager 주변 원형 범위로 폴백
+            return (Vector2)transform.position + Random.insideUnitCircle * 2f;
+        }
+    
+        Bounds b = spawnArea.bounds;
+        float x = Random.Range(b.min.x, b.max.x);
+        float y = Random.Range(b.min.y, b.max.y);
+        return new Vector2(x, y);
+    }
+    
+    // (디버그) 에디터에서 스폰 영역 보이기
+    void OnDrawGizmosSelected()
+    {
+        if (!spawnArea) return;
+        Gizmos.color = new Color(0f, 1f, 1f, 0.6f);
+        Gizmos.DrawWireCube(spawnArea.bounds.center, spawnArea.bounds.size);
+    }
 }

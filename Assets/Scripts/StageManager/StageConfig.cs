@@ -8,7 +8,7 @@ public class StageConfig : ScriptableObject
     [Serializable]
     public class FishRule
     {
-        public FishMonster fish;
+        public GameObject fish;
         [Min(0)] public int minCount = 1;
         [Min(0)] public int maxCount = 3; // 실제 스폰은 [min, max] 랜덤
     }

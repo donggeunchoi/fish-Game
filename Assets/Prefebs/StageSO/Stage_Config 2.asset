@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageNumber: 2
   fishRules:
-  - fish: {fileID: 11400000, guid: 107675f628b35476ba22f3e3426352f6, type: 2}
+  - fish: {fileID: 7331845198384460096, guid: c98073581a4af4eeca2c1c198ed32447, type: 3}
     minCount: 1
     maxCount: 5
-  - fish: {fileID: 11400000, guid: 1b1338fad40a547ceb5882ed826fca20, type: 2}
+  - fish: {fileID: 5637307415150857268, guid: 434b812efdb4d4802b7130c2eea599d5, type: 3}
     minCount: 1
     maxCount: 5
