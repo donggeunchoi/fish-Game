@@ -1,18 +1,109 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Stage Data")] [SerializeField]
+    private StageSO stageDB; // StageSO: 스테이지 모음(SO)
+
+    [SerializeField] private int currentStage; // 시작 시 StageManager에서 가져옴
+
+    [Header("Spawn")] [SerializeField] private BoxCollider2D spawnArea; // 스폰 범위(SpawnArea 오브젝트의 BoxCollider2D)
+    [SerializeField] private Transform container; // 생성된 물고기 부모(비우면 자동 생성)
+
+    void Awake()
     {
-        
+        // 선택된 스테이지 번호 가져오기 (없으면 PlayerPrefs, 최종 폴백 0)
+        currentStage = StageManager.instance
+            ? StageManager.instance.SelectedStage
+            : PlayerPrefs.GetInt("SelectedStage", 0);
+
+        if (container == null)
+        {
+            var go = new GameObject("FishContainer");
+            container = go.transform;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        SpawnStage(currentStage);
     }
+
+    // --------------------------------------------------------------------
+    // 스테이지 규칙대로 물고기 스폰
+    // --------------------------------------------------------------------
+    public void SpawnStage(int stageNumber)
+    {
+        if (stageDB == null)
+        {
+            Debug.LogError("[GameManager] StageSO(stageDB)가 비어있습니다.");
+            return;
+        }
+
+        StageConfig cfg = stageDB.GetByNumber(stageNumber);
+        if (cfg == null)
+        {
+            Debug.LogError($"[GameManager] Stage {stageNumber} 설정을 찾지 못했습니다.");
+            return;
+        }
+
+        foreach (var rule in cfg.fishRules)
+        {
+            if (rule == null || rule.fish == null || rule.maxCount < 1) continue;
+
+            int count = Random.Range(rule.minCount, rule.maxCount + 1);
+            // for (int i = 0; i < count; i++)
+            //     SpawnOne(rule.fish);
+        }
+    }
+
+    // 물고기 1마리 생성
+    // void SpawnOne(FishMonster data)
+    // {
+    // if (data == null || data.prefab == null)
+    // {
+    //     Debug.LogWarning("[GameManager] FishMonster 데이터나 prefab이 비어있습니다.");
+    //     return;
+    // }
+    //
+    // Vector2 pos = RandomPointInArea();
+    // var go = Instantiate(data.prefab, pos, Quaternion.identity, container);
+    //
+    // 데이터 주입(네 FishController의 필드명이 다르면 여기를 맞춰줘)
+    // var ctrl = go.GetComponent<FishController>();
+    // if (ctrl != null)
+    // {
+    //     ctrl.fishData = data; // 예: public FishMonster fishData;
+    // }
+    // else
+    // {
+    //     // 스프라이트만 적용해두는 폴백
+    //     var sr = go.GetComponentInChildren<SpriteRenderer>();
+    //     if (sr && data.sprite) sr.sprite = data.sprite;
+    // }
+
+
+    // // 스폰 영역 안의 랜덤 좌표 반환
+    // Vector2 RandomPointInArea()
+    // {
+    //     if (spawnArea == null)
+    //     {
+    //         // 영역이 없으면 GameManager 주변 원형 범위로 폴백
+    //         return (Vector2)transform.position + Random.insideUnitCircle * 2f;
+    //     }
+    //
+    //     Bounds b = spawnArea.bounds;
+    //     float x = Random.Range(b.min.x, b.max.x);
+    //     float y = Random.Range(b.min.y, b.max.y);
+    //     return new Vector2(x, y);
+    // }
+    //
+    // // (디버그) 에디터에서 스폰 영역 보이기
+    // void OnDrawGizmosSelected()
+    // {
+    //     if (!spawnArea) return;
+    //     Gizmos.color = new Color(0f, 1f, 1f, 0.6f);
+    //     Gizmos.DrawWireCube(spawnArea.bounds.center, spawnArea.bounds.size);
+    // }
 }
