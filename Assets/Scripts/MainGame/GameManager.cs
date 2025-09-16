@@ -53,7 +53,14 @@ public class GameManager : MonoBehaviour
             if (rule == null || rule.fish == null || rule.maxCount < 1) continue;
 
             int count = Random.Range(rule.minCount, rule.maxCount + 1);
-            
+
+            for (int i = 0; i < count; i++)
+            {
+                Vector2 spawnPoint = RandomPointInArea();
+                
+                GameObject fish = Instantiate(rule.fish, spawnPoint, Quaternion.identity);
+                
+            }
         }
     }
 
