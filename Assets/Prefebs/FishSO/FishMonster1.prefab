@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c93cfe6cbaab648a7b92f96d64bce0da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishData: {fileID: 11400000, guid: 107675f628b35476ba22f3e3426352f6, type: 2}
+  moveRange: 0
 --- !u!60 &7693097546768156622
 PolygonCollider2D:
   m_ObjectHideFlags: 0
