@@ -11,8 +11,5 @@ public class FishMonster : ScriptableObject
 
     [Header("능력치")] 
     public float moveSpeed;
-
-    [Header("행동 설정")] 
-    public bool canSwimLeftRight;
     
 }
