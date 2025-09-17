@@ -27,7 +27,6 @@ public class FishController : MonoBehaviour
     void Update()
     {
         if (fishData == null) return;
-
        
         transform.Translate(Vector2.right * fishData.moveSpeed * direction * Time.deltaTime);
 
