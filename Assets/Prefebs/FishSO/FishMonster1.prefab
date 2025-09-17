@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishData: {fileID: 11400000, guid: 107675f628b35476ba22f3e3426352f6, type: 2}
-  moveRange: 0
+  moveRange: 5
 --- !u!60 &7693097546768156622
 PolygonCollider2D:
   m_ObjectHideFlags: 0
