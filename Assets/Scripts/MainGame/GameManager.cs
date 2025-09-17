@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
             {
                 Vector2 spawnPoint = RandomPointInArea();
                 
-                GameObject fish = Instantiate(rule.fish, spawnPoint, Quaternion.identity);
+                GameObject fish = Instantiate(rule.fish, spawnPoint, Quaternion.identity,container.transform);
                 
             }
         }
@@ -86,5 +86,11 @@ public class GameManager : MonoBehaviour
         if (!spawnArea) return;
         Gizmos.color = new Color(0f, 1f, 1f, 0.6f);
         Gizmos.DrawWireCube(spawnArea.bounds.center, spawnArea.bounds.size);
+    }
+
+
+    public void GameClear()
+    {
+        //여기에서 퀘스트에 대한 내용을 확인하고 충족되면 클리어 UI를 나타나도록 구현하기.
     }
 }

@@ -64,4 +64,9 @@ public class Player : MonoBehaviour
             target.localScale = s;
         }
     }
+
+    public void GameOver()
+    {
+        //상대적으로 큰물고기라는 오브젝트와 충돌이 되었을 때 게임 오버에 대한 로직구현
+    }
 }
