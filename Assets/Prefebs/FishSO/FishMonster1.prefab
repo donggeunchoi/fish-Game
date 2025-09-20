@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1035484969283451245}
   - component: {fileID: 2464669800193376840}
   - component: {fileID: 7693097546768156622}
+  - component: {fileID: 768584150794408052}
+  - component: {fileID: -8887637315068454773}
   m_Layer: 0
   m_Name: FishMonster1
   m_TagString: Untagged
@@ -131,7 +133,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -164,3 +166,42 @@ PolygonCollider2D:
       - {x: 0.3134492, y: -0.033797022}
       - {x: 0.31344926, y: 0.026724624}
   m_UseDelaunayMesh: 0
+--- !u!114 &768584150794408052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7331845198384460096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ec52bf370fa4761ac5dd4c773a8466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &-8887637315068454773
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7331845198384460096}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
