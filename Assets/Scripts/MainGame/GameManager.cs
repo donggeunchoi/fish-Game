@@ -11,8 +11,21 @@ public class GameManager : MonoBehaviour
     [Header("Spawn")] [SerializeField] private BoxCollider2D spawnArea; // 스폰 범위(SpawnArea 오브젝트의 BoxCollider2D)
     [SerializeField] private Transform container; // 생성된 물고기 부모(비우면 자동 생성)
 
+    [SerializeField] private GameObject GameOverPanel;
+    
+    public static GameManager instance { get; private set; }
     void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+        instance = this;
+        //DontDestroyOnLoad(gameObject);
+        
+        
         // 선택된 스테이지 번호 가져오기 (없으면 PlayerPrefs, 최종 폴백 0)
         currentStage = StageManager.instance
             ? StageManager.instance.SelectedStage
@@ -23,6 +36,7 @@ public class GameManager : MonoBehaviour
             var go = new GameObject("FishContainer");
             container = go.transform;
         }
+
     }
 
     void Start()
@@ -89,8 +103,9 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void GameClear()
+    public void GameOver()
     {
+        GameOverPanel.SetActive(true);
         //여기에서 퀘스트에 대한 내용을 확인하고 충족되면 클리어 UI를 나타나도록 구현하기.
     }
 }
