@@ -10,7 +10,10 @@ public class FishController : MonoBehaviour
     private SpriteRenderer sr;
     private float direction = 1f;
 
+    public int moveRangeMax;
+    public int moveRangeMin;
     public int moveRange;
+    private Vector3 spawnPosition;
 
     void Awake()
     {
@@ -22,6 +25,10 @@ public class FishController : MonoBehaviour
             sr.sprite = fishData.sprite;
             gameObject.name = fishData.fishName;
         }
+        
+        spawnPosition = transform.position;
+        
+        moveRange = Random.Range(moveRangeMin, moveRangeMax);
     }
 
     void Update()
@@ -30,8 +37,10 @@ public class FishController : MonoBehaviour
        
         transform.Translate(Vector2.right * fishData.moveSpeed * direction * Time.deltaTime);
 
-        // 화면 양쪽 끝에서 반전 (예: x 좌표 5 넘어가면 방향 전환)
-        if (Mathf.Abs(transform.position.x) > 5f)
+        float distanceFromSpawn = transform.position.x - spawnPosition.x;
+        
+        
+        if (Mathf.Abs(distanceFromSpawn) >= moveRange)
         {
             direction *= -1f;
             sr.flipX = direction < 0f;
