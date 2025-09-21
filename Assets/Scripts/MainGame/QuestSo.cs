@@ -12,8 +12,15 @@ public class QuestData
     public int targetCount;
 }
 
+[System.Serializable]
+public class StageQuestData
+{
+    public int stageNumber;
+    public List<QuestData> quests;
+}
+
 [CreateAssetMenu(fileName = "QuestSo", menuName = "Game/QuestSo")]
 public class QuestSo : ScriptableObject
 {
-    public QuestData[] quests;
+    public List<StageQuestData> stageQuests;
 }

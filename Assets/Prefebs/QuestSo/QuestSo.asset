@@ -12,13 +12,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ef9c6f3632e47d39870faa7df89f2b, type: 3}
   m_Name: QuestSo
   m_EditorClassIdentifier: 
-  quests:
-  - description: "1\uC2A4\uD14C\uC774\uC9C0 1\uB2E8\uACC4"
-    type: 0
-    targetCount: 1
-  - description: "1\uC2A4\uD14C\uC774\uC9C0 2\uB2E8\uACC4"
-    type: 0
-    targetCount: 2
-  - description: "1\uC2A4\uD14C\uC774\uC9C0 3\uB2E8\uACC4"
-    type: 0
-    targetCount: 4
+  stageQuests:
+  - stageNumber: 1
+    quests:
+    - description: "1\uC2A4\uD14C\uC774\uC9C0 1\uB2E8\uACC4"
+      type: 0
+      targetCount: 1
+    - description: "1\uC2A4\uD14C\uC774\uC9C0 2\uB2E8\uACC4"
+      type: 0
+      targetCount: 3
+    - description: "1\uC2A4\uD14C\uC774\uC9C0 3\uB2E8\uACC4"
+      type: 0
+      targetCount: 5
+  - stageNumber: 2
+    quests:
+    - description: "2\uC2A4\uD14C\uC774\uC9C0 1\uB2E8\uACC4"
+      type: 0
+      targetCount: 1
+    - description: "2\uC2A4\uD14C\uC774\uC9C0 2\uB2E8\uACC4"
+      type: 0
+      targetCount: 3
+    - description: "2\uC2A4\uD14C\uC774\uC9C0 3\uB2E8\uACC4"
+      type: 0
+      targetCount: 5
+  - stageNumber: 3
+    quests:
+    - description: "3\uC2A4\uD14C\uC774\uC9C0 1\uB2E8\uACC4"
+      type: 0
+      targetCount: 1
+    - description: "3\uC2A4\uD14C\uC774\uC9C0 2\uB2E8\uACC4"
+      type: 0
+      targetCount: 3
+    - description: "3\uC2A4\uD14C\uC774\uC9C0 3\uB2E8\uACC4"
+      type: 0
+      targetCount: 5
+  - stageNumber: 4
+    quests:
+    - description: "4\uC2A4\uD14C\uC774\uC9C0 1\uB2E8\uACC4"
+      type: 0
+      targetCount: 1
+    - description: "4\uC2A4\uD14C\uC774\uC9C0 2\uB2E8\uACC4"
+      type: 0
+      targetCount: 3
+    - description: "4\uC2A4\uD14C\uC774\uC9C0 3\uB2E8\uACC4"
+      type: 0
+      targetCount: 5
+  - stageNumber: 5
+    quests:
+    - description: "5\uC2A4\uD14C\uC774\uC9C0 1\uB2E8\uACC4"
+      type: 0
+      targetCount: 1
+    - description: "5\uC2A4\uD14C\uC774\uC9C0 2\uB2E8\uACC4"
+      type: 0
+      targetCount: 3
+    - description: "5\uC2A4\uD14C\uC774\uC9C0 3\uB2E8\uACC4"
+      type: 0
+      targetCount: 5
