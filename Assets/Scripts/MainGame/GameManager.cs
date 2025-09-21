@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,12 +25,6 @@ public class GameManager : MonoBehaviour
         
         instance = this;
         //DontDestroyOnLoad(gameObject);
-        
-        
-        // 선택된 스테이지 번호 가져오기 (없으면 PlayerPrefs, 최종 폴백 0)
-        currentStage = StageManager.instance
-            ? StageManager.instance.SelectedStage
-            : PlayerPrefs.GetInt("SelectedStage", 0);
 
         if (container == null)
         {
@@ -107,5 +102,10 @@ public class GameManager : MonoBehaviour
     {
         GameOverPanel.SetActive(true);
         //여기에서 퀘스트에 대한 내용을 확인하고 충족되면 클리어 UI를 나타나도록 구현하기.
+    }
+
+    public void OnclickStageMove()
+    {
+        SceneManager.LoadScene("StageScene");
     }
 }

@@ -6,14 +6,9 @@ using UnityEngine.SceneManagement;
 public class StageManager : MonoBehaviour
 {
     public static StageManager instance { get; private set; }
-    public int SelectedStage { get; private set; } = 1;
+    public int SelectedStage { get; private set; }
     [SerializeField] private string GameSceneName = "GameScene";
     [SerializeField] private string stageSelectSceneName = "StageScene";
-  
-    const string KeySelectedStage = "SelectedStage";
-    const string KeyUnlockedMask =  "UnlockedMask";
-
-    public int unlockedMask;
     
     void Awake()
     {
@@ -23,22 +18,21 @@ public class StageManager : MonoBehaviour
             return;
         }
         instance = this;
-        DontDestroyOnLoad(gameObject);
-
-        if (PlayerPrefs.HasKey("SelectedStage"))
-        {
-            SelectedStage = PlayerPrefs.GetInt("SelectedStage",1);
-        }
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void SelectStage(int stageNum)
     {
         SelectedStage = stageNum;
-        PlayerPrefs.SetInt("SelectedStage", stageNum);
     }
     public void OnClickInGame(int stageNum)
     {
         SelectStage(stageNum);
         SceneManager.LoadScene(GameSceneName);
+    }
+
+    public void LoadStageSelect()
+    {
+        SceneManager.LoadScene(stageSelectSceneName);
     }
 }
