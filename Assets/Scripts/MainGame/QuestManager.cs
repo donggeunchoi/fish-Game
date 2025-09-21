@@ -40,9 +40,9 @@ public class QuestManager : MonoBehaviour
 
     void ShowQuest()
     {
-        
-        
-        missionText.text = stageQuest.quests[currentQuest].targetCount.ToString("n0");
+        string message = stageQuest.quests[currentQuest].targetCount.ToString("n0");
+
+        missionText.text = $"0 / {message}";
         //UI 표출 기능 작성할 예정
     }
 
