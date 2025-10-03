@@ -967,6 +967,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageQuest: {fileID: 11400000, guid: 77234066ad5b944e2be9f0a4ce9a14f3, type: 2}
+  questData:
+    description: 
+    type: 0
+    targetCount: 0
   gameClearPanel: {fileID: 1943523225}
   missionText: {fileID: 688695838}
 --- !u!1 &674889051

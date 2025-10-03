@@ -9,7 +9,10 @@ public class FishCol : MonoBehaviour
    {
       if (collision.CompareTag("Player"))
       {
-         GameManager.instance.GameOver();
+         QuestManager questManager = FindObjectOfType<QuestManager>();
+
+         questManager.currentCount++;
+         // GameManager.instance.GameOver();
       }
    }
    

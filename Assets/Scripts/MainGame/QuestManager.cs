@@ -6,7 +6,7 @@ public class QuestManager : MonoBehaviour
 {
     public QuestSo stageQuest;
     private int currentQuest = 0;
-    private int currentCount = 0;
+    public int currentCount;
     
     public GameObject gameClearPanel;
     
@@ -18,36 +18,20 @@ public class QuestManager : MonoBehaviour
         ShowQuest();
     }
 
-    public void ProgressQuest()
+    void Update()
     {
-        currentCount++;
-
-        // if (currentCount >= stageQuest.quests[currentQuest].targetCount)
-        // {
-        //     currentQuest++;
-        //     currentCount = 0;
-        //
-        //     if (currentQuest >= stageQuest.quests.Length)
-        //     {
-        //         GameClear();
-        //     }
-        //     else
-        //     {
-        //         ShowQuest();
-        //     }
-        // }
+        ShowQuest();
     }
 
-    void ShowQuest()
+    private void ShowQuest()
     {
-        // string message = stageQuest.quests[currentQuest].targetCount.ToString("n0");
-        //
-        // missionText.text = $"0 / {message}";
-        //UI 표출 기능 작성할 예정
+        missionText.text = $"{currentCount}/{stageQuest.stageQuests.Count}";
     }
-
+    
     public void GameClear()
     {
-        //gameClearPanel.SetActive(true);
+        gameClearPanel.SetActive(true);
     }
+    
+    
 }
