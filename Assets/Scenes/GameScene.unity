@@ -950,10 +950,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageDB: {fileID: 11400000, guid: 9e83fb89c73974db4944b670b9acd2ca, type: 2}
+  questDB:
+    description: 
+    type: 0
+    targetCount: 0
   currentStage: 1
   spawnArea: {fileID: 773614962}
   container: {fileID: 914237339}
   GameOverPanel: {fileID: 459783609}
+  questManager: {fileID: 537994979}
 --- !u!114 &537994979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,10 +972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageQuest: {fileID: 11400000, guid: 77234066ad5b944e2be9f0a4ce9a14f3, type: 2}
-  questData:
-    description: 
-    type: 0
-    targetCount: 0
+  currentCount: 0
   gameClearPanel: {fileID: 1943523225}
   missionText: {fileID: 688695838}
 --- !u!1 &674889051

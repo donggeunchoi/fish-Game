@@ -6,13 +6,16 @@ public class GameManager : MonoBehaviour
 {
     [Header("Stage Data")] [SerializeField]
     private StageSO stageDB; // StageSO: 스테이지 모음(SO)
-
+    public QuestData questDB;
+    
     [SerializeField] private int currentStage; // 시작 시 StageManager에서 가져옴
 
     [Header("Spawn")] [SerializeField] private BoxCollider2D spawnArea; // 스폰 범위(SpawnArea 오브젝트의 BoxCollider2D)
     [SerializeField] private Transform container; // 생성된 물고기 부모(비우면 자동 생성)
 
     [SerializeField] private GameObject GameOverPanel;
+    
+    public QuestManager questManager;
     
     public static GameManager instance { get; private set; }
     void Awake()
@@ -37,6 +40,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SpawnStage(currentStage);
+        
+        
+    }
+
+    void Update()
+    {
+        if (questManager.currentCount == questDB.targetCount)
+        {
+            GameClear();
+        }
     }
 
     // --------------------------------------------------------------------
@@ -107,5 +120,10 @@ public class GameManager : MonoBehaviour
     public void OnclickStageMove()
     {
         SceneManager.LoadScene("StageScene");
+    }
+
+    public void GameClear()
+    {
+            SceneManager.LoadScene("StageScene");
     }
 }
